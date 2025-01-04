@@ -238,3 +238,52 @@ const numArrayOdd = numArray.filter((num) => {
 })
 console.log(numArrayOdd);
 
+/**
+ * 三項演算子
+ * */
+const val = 0 < 1 ? "true" : "false";
+console.log(`結果は${val}です`)
+
+const sankoNum = 1300;
+const formatedSankoNum = typeof sankoNum === 'number' ? sankoNum.toLocaleString() : "数値を入力して";
+console.log(formatedSankoNum);
+
+const sankoCheckSum = (num1,num2) => {
+    return num1 + num2 > 100 ? "100超え" : "許容範囲内" ;
+}
+console.log(sankoCheckSum(30,30))
+console.log(sankoCheckSum(50,52))
+
+/**
+ * 論理演算子について
+ * */
+// truethy falthyについて
+// 様々な型で truthyかfalsyを判定できなければバグを生む
+const logicVal = ""
+const logicCheck = (logicVal) => {
+    logicVal ? console.log("truthyです") : console.log("falsyです");
+}
+logicCheck(logicVal);
+
+const logicFlagA = true;
+const logicFlagB = false;
+
+if(logicFlagA || logicFlagB){
+    // いずれかの値が thruthy の場合に処理が実行される
+    console.log('A か Bがtrue');
+}
+
+if(logicFlagA && logicFlagB){
+    // 両方の値が truthy の場合に値を表示する
+    console.log('A と Bがtrue');
+}// 両方の値が falsthyの場合に値を表示する
+
+// ||の左側がtruthyの場合に結果を返す
+const logicNum = null;
+const fee = logicNum || "金額設定がされていないよ"; // 短絡評価
+console.log(fee);
+
+// && は左側がtruthyの時に結果を返す
+const numB = 100;
+const feeB = numB && "何かが設定されたぞ";
+console.log(feeB);
