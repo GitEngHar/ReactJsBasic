@@ -205,3 +205,36 @@ const arrayH = arrayD; //参照コピー
 arrayH[0] = 1;
 console.log(`arrayH: ${arrayH} & arrayD: ${arrayD}`) //arrayDにも同様の変更が加えられている。同じメモリを見てる
 
+/**
+ * map や filterを使った配列処理
+ * */
+const nameArr = ["hoge","fuga","jake"];
+for(let index=0; index<nameArr.length; index++){
+    console.log(nameArr[index]);
+    console.log(`${index}番目は${nameArr[index]}です`);
+}
+
+//2番目の引数に配列数が入ってくるしよう
+nameArr.map((name, index) => {
+    console.log(`map : ${index}番目は${nameArr[index]}です`);
+})
+
+//同じ処理をmapでやる
+//returnすると新しい配列を作れる
+const nameArrB = nameArr.map((name) => {
+    return name;
+})
+console.log(nameArrB);
+
+const nameArrC = nameArr.map((name) => {
+    return name === "jake" ? name : `${name}さん`;
+});
+console.log(nameArrC);
+
+//条件でtrueの場合のみ値を返す
+const numArray = [1,2,3,4,5]
+const numArrayOdd = numArray.filter((num) => {
+    return num % 2 === 1;
+})
+console.log(numArrayOdd);
+
