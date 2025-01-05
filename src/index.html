@@ -7,12 +7,12 @@
 <body>
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <div class="input-area">
-        <input placeholder="TODOを入力">
-        <button>追加</button>
+        <input id="add-text" placeholder="TODOを入力">
+        <button id="add-button">追加</button>
     </div>
     <div class="incomplete-area">
         <p class="title">未完了TODO</p>
-        <ul>
+        <ul id="incomplete-list">
             <li>
                 <div class="list-row">
                     <p class="todo-item">TODO</p>
@@ -31,7 +31,7 @@
     </div>
     <div class="complete-area">
         <p class="title">完了TODO</p>
-        <ul>
+        <ul id="complete-list">
             <li>
                 <div class="list-row">
                     <p class="todo-item">TODO完了済み</p>
@@ -40,7 +40,7 @@
             </li>
         </ul>
     </div>
-<!--    <script src="./index.js" type="module"></script>-->
-    <script src="./easyCode.js" type="module"></script>
+    <script src="./index.js" type="module"></script>
+<!--    <script src="./easyCode.js" type="module"></script>-->
 </body>
 </html>
